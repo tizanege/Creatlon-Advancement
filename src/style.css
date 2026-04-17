@@ -60,4 +60,103 @@ body {
   display: flex;
   flex-direction: column;
   border-left: 1px solid var(--border-color);
+  transition: right 0.3s ease;
+}
+
+.backdrop {
+  position: fixed;
+  top: 65px; /* Below navbar approx*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 40;
+  transition: all 0.3s ease;
+}
+
+.panel-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.panel-header-title {
+  gap: var(--space-sm);
+  color: var(--primary-orange);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.icon-close {
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tabs-wrapper {
+  padding: var(--space-lg) var(--space-lg) 0 var(--space-lg);
+}
+
+.tabs-container {
+  background-color: var(--bg-color);
+  padding: var(--space-xs);
+  border-radius: var(--radius-xl);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-sm) 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-item.active {
+  background-color: var(--panel-bg);
+  color: var(--primary-orange);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.panel-content {
+  padding: var(--space-lg);
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.brand-story-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.brand-description {
+  font-size: 13px;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.dummy-logo {
+  width: 48px;
+  height: 48px;
+  background-color: #1c2e4a;
+  border-radius: var(--radius-sm); /* Changed from 6px to radius-sm (4px) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.panel-empty-state {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: var(--space-xl); /* Changed from 40px to var(--space-xl) (32px) */
 }
