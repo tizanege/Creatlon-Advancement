@@ -13,7 +13,7 @@ export default function WorkspaceHeader() {
     }}>
       <div className="flex-row" style={{ gap: '16px' }}>
         <div style={{
-          width: '48px', height: '48px', borderRadius: '12px',
+          width: '48px', height: '48px', borderRadius: '12px', 
           backgroundColor: 'var(--primary-color)', color: 'white',
           display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
@@ -24,7 +24,7 @@ export default function WorkspaceHeader() {
           <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Design studio workspace</span>
         </div>
       </div>
-
+      
       <div className="flex-row" style={{ gap: '12px' }}>
         {['Brand Story', 'Brand Guidelines', 'Brand Design Assets'].map((label, idx) => (
           <button key={idx} className="btn btn-outline-primary" style={{ padding: '8px 16px', fontSize: '13px' }}>
