@@ -8,25 +8,13 @@ export default function RightPanel({ isOpen, onClose }) {
   return (
     <>
       {/* Backdrop */}
-      <div
-        onClick={onClose}
-        className="backdrop"
-        style={{
-          opacity: isOpen ? 1 : 0,
-          visibility: isOpen ? "visible" : "hidden",
-        }}
-      />
+      <div onClick={onClose} className={`backdrop ${isOpen ? "open" : ""}`} />
 
       {/* Side Panel */}
-      <div
-        className="right-side-panel"
-        style={{
-          right: isOpen ? "0" : "-400px",
-        }}
-      >
+      <div className={`right-side-panel ${isOpen ? "open" : ""}`}>
         {/* Header */}
-        <div className="panel-header flex-row justify-between">
-          <div className="panel-header-title flex-row">
+        <div className="panel-header">
+          <div className="panel-header-title">
             <BookOpen size={20} />
             Brand Resources
           </div>
@@ -35,7 +23,7 @@ export default function RightPanel({ isOpen, onClose }) {
 
         {/* Tabs */}
         <div className="tabs-wrapper">
-          <div className="tabs-container flex-row">
+          <div className="tabs-container">
             {tabs.map((tab) => (
               <div
                 key={tab}
